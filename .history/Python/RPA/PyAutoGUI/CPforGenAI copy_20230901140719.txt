@@ -1,0 +1,111 @@
+あなたは、プロのコーダーです。
+以下のControlとInputから、プログラムを出力してください。
+なおInputはない場合は、Noneとします。
+
+###Control
+プログラムはpython3でお願いいたします。
+スタイルはPEP8でお願いいたします。
+ドキュメンテーションはPEP257でお願いいたします。
+その他、python公式の記述方式に従ってください。
+
+特定のサイト：url にアクセスし、スクレイピングをしたいです。
+まずchromeを起動し、urlにアクセスします。
+起動時間などネットへの接続が発生する場合はwait_time_lで設定してください。
+その他はまずはwait_time_mで設定してください。
+
+アクションは以下の通りのため、それを実行してください。
+
+
+なおプログラムの可用性やメンテ性などを考慮したわかりやすいコードでコメントも追記しながら記述してください。
+
+###Input
+
+import pyautogui
+import datetime
+from selenium import webdriver
+import os
+import glob
+import shutil
+from pathlib import Path
+import zipfile
+import csv
+import openpyxl as px
+from openpyxl.utils import column_index_from_string
+import tkinter as tk
+from tkinter import messagebox, simpledialog, StringVar, OptionMenu
+import time
+
+wait_time_s = 0.5
+wait_time_m = 3
+wait_time_l = 7
+
+
+
+CHROME_PATH= r'C:\Program Files\Google\Chrome\Application\chrome.exe'
+
+url = 'https://www.customs.go.jp/toukei/srch/index.htm?M=77&P=0'
+    
+# WebDriverを起動する関数
+
+
+# pyautoguiで操作を行う関数
+
+    # 入力アクションの定義
+    input_actions = [
+        ('right',),
+        ('tab', WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('space', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('down', WAIT_TIME),
+        ('down', WAIT_TIME),
+        ('down', WAIT_TIME),
+        ('down', WAIT_TIME),
+        ('down', WAIT_TIME),
+        ('down', WAIT_TIME),
+        ('enter', WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('space', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('enter', WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('space', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('down', WAIT_TIME),
+        ('enter', WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('typewrite', ('105',), WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('space', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('up', WAIT_TIME),
+        ('down', WAIT_TIME),
+        ('enter', WAIT_TIME),
+        ('tab', WAIT_TIME),
+        ('typewrite', (user_data[0],), WAIT_TIME),
+        ('enter', WAIT_TIME),
+    ]
+    
+
+インプットデータ：ここからGUIで選択
+
+        # 選択されたデータに応じて表示名を設定
+        data_display_names = {
+            '293212000': 'FL',
+            '293213000': 'FA'
+        }
+

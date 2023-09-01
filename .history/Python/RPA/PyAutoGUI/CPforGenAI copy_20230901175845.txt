@@ -1,0 +1,67 @@
+あなたは、プロのコーダーです。
+以下のControlとInputから、プログラムを出力してください。
+なおInputはない場合は、Noneとします。
+
+###Control
+プログラムはpython3でお願いいたします。
+スタイルはPEP8でお願いいたします。
+ドキュメンテーションはPEP257でお願いいたします。
+その他、python公式の記述方式に従ってください。
+
+特定のサイト：url にアクセスし、スクレイピングをしたいです。
+
+流れを説明します。
+
+chromeを起動し、urlにアクセスします。
+起動時間などネットへの接続が発生する場合はwait_time_lで設定してください。
+その他はまずはwait_time_mで設定してください。
+
+3. これは次のステップです。
+    インプットデータはguiで使用します。
+    アクションは以下の通りのため、それを実行してください。
+
+
+なおプログラムの可用性やメンテ性などを考慮したわかりやすいコードでコメントも追記しながら記述してください。
+
+###Input
+
+
+url = 'https://www.customs.go.jp/toukei/srch/index.htm?M=77&P=0'
+    
+
+data_display_namesをguiへ引き当てる
+すなわち、data_display_namesのkeyをguiの選択肢として表示し、valueを選択されたデータとして扱う
+*valueが数字になるように変更する
+
+        # 選択されたデータに応じて表示名を設定
+
+        data_display_names = {
+            '293212000': 'FL',
+            '293213000': 'FA'
+        }
+
+///gui参考tkinter
+def handle_option_selection(option,options_window):
+    options_window.destroy()
+    pyautogui.click(100, 150)  # pyautoguiで座標(100, 150)をクリック
+    daijin_exe(option)
+    show_completion_message(option)
+
+def show_options():
+    options_window = tk.Tk()
+    options_window.title("選択肢")
+    options_window.attributes("-topmost", True)  # ウィンドウを最前面に設定
+
+    label = tk.Label(options_window, text="選択肢を選んでください:")
+    label.pack(padx=20, pady=20)
+
+    option1_button = tk.Button(options_window, text="24->11 01", command=lambda: handle_option_selection(1,options_window))
+    option1_button.pack(padx=10, pady=5)
+
+    option2_button = tk.Button(options_window, text="24->11 02", command=lambda: handle_option_selection(2,options_window))
+    option2_button.pack(padx=10, pady=5)
+
+    options_window.mainloop()
+///ここまで
+
+
