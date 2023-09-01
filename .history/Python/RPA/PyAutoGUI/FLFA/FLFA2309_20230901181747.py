@@ -24,7 +24,7 @@ def check_image_presence(target_image_path, max_tries):
 
         while try_count < max_tries:
             time.sleep(2)  # 画像が表示されるまで待機
-            target_position = pyautogui.locateOnScreen(target_image_path, confidence=0.9)
+            target_position = pyautogui.locateOnScreen(target_image_path, confidence=0.8)
 
             if target_position is not None:
                 target_center = pyautogui.center(target_position)
